@@ -117,7 +117,7 @@ build
 ############################
 # Yarn
 ############################
-.yarn/*
+.yarn/**
 !.yarn/cache
 !.yarn/patches
 !.yarn/plugins
