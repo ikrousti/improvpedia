@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getStrapiMedia, formatDate } from "../utils/api-helpers";
 
-interface Article {
+interface article {
   id: 4;
   attributes: {
     title: string;
@@ -26,28 +26,14 @@ interface Article {
         };
       };
     };
-    authorsBio: {
-      data: {
-        attributes: {
-          name: string;
-          avatar: {
-            data: {
-              attributes: {
-                url: string;
-              };
-            };
-          };
-        };
-      };
-    };
   };
 }
 
-export default function PostList({
+export default function articleList({
   data: articles,
   children,
 }: {
-  data: Article[];
+  data: article[];
   children?: React.ReactNode;
 }) {
   return (
@@ -58,11 +44,11 @@ export default function PostList({
             article.attributes.cover.data?.attributes.url
           );
 
-          const category = article.attributes.category.data?.attributes;;
+          const category = article.attributes.category.data?.attributes;
 
           return (
             <Link
-              href={`blog/${category?.slug}/${article.attributes.slug}`}
+              href={`articles/${category?.slug}/${article.attributes.slug}`}
               key={article.id}
               className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900 lg:w-[300px] xl:min-w-[375px] rounded-2xl overflow-hidden shadow-lg"
             >
