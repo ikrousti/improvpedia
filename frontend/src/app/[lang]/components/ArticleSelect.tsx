@@ -49,7 +49,7 @@ export default function ArticleSelect({
             if (category.attributes.articles.data.length === 0) return null;
             return (
               <Link
-                href={`/blog/${category.attributes.slug}`}
+                href={`/games/${category.attributes.slug}`}
                 className={selectedFilter(
                   category.attributes.slug,
                   params.category
@@ -59,7 +59,7 @@ export default function ArticleSelect({
               </Link>
             );
           })}
-          <Link href={"/blog"} className={selectedFilter("", "filter")}>
+          <Link href={"/games"} className={selectedFilter("", "filter")}>
             #all
           </Link>
         </div>
@@ -72,7 +72,7 @@ export default function ArticleSelect({
                 <li>
                   <Link
                     rel="noopener noreferrer"
-                    href={`/blog/${params.category}/${article.attributes.slug}`}
+                    href={`/games/${params.category}/${article.attributes.slug}`}
                     className={`${
                       params.slug === article.attributes.slug &&
                       "text-violet-400"

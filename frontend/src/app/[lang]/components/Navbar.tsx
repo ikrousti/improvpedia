@@ -52,13 +52,13 @@ export default function Navbar({
     </div>
     <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
       <div className="text-sm lg:flex-grow">
-        <a href="/Games/shortform" className="block mt-4 lg:inline-block lg:mt-0 text-orange-400 hover:text-white mr-4">
+        <a href="/games/shortform" className="block mt-4 lg:inline-block lg:mt-0 text-orange-400 hover:text-white mr-4">
           Shortform
         </a>
-        <a href="/Games/longform" className="block mt-4 lg:inline-block lg:mt-0 text-orange-400 hover:text-white mr-4">
+        <a href="/games/longform" className="block mt-4 lg:inline-block lg:mt-0 text-orange-400 hover:text-white mr-4">
           Longform
         </a>
-        <a href="/Games/mediumform" className="block mt-4 lg:inline-block lg:mt-0 text-orange-400 hover:text-white mr-4">
+        <a href="/games/mediumform" className="block mt-4 lg:inline-block lg:mt-0 text-orange-400 hover:text-white mr-4">
           Mediumform
         </a>
       </div>
