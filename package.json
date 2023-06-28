@@ -12,5 +12,8 @@
   "dependencies": {
     "concurrently": "^7.6.0",
     "strapi-plugin-navigation": "latest"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8"
   }
 }

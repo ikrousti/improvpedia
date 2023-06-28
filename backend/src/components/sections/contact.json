@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_sections_contacts",
+  "info": {
+    "displayName": "Contact"
+  },
+  "options": {},
+  "attributes": {
+    "Contact": {
+      "type": "richtext"
+    }
+  }
+}
