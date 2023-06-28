@@ -8,6 +8,10 @@ body {
   background-color: rgb(255 247 237);
 }
 
+footer {
+  background-color: #fed7aa
+}
+
 
 /******************************************* 
   Rich Text Styles
@@ -80,7 +84,7 @@ body {
 }
 
 .rich-text li {
-  @apply mb-2;
+  @apply mb-2 ;
 }
 
 .rich-text li > ul {
