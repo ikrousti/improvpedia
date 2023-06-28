@@ -28,8 +28,8 @@ function FooterLink({ url, text }: FooterLink) {
     <li className="flex">
       <Link
         href={url}
-        className={`hover:dark:text-violet-400 ${
-          path === url && "dark:text-violet-400 dark:border-violet-400"
+        className={`hover:dark:text-violet-400 hover:underline  ${
+          path === url && "dark:text-violet-400 dark:border-violet-400 "
         }}`}
       >
         {text}
@@ -103,9 +103,9 @@ export default function Footer({
 
           <div className="col-span-6 text-center md:text-left md:col-span-3">
             <p className="pb-1 text-lg font-medium text-violet-400">Menu</p>
-            <ul className= "no-underline hover:underline">
+            <ul >
               {menuLinks.map((link: FooterLink) => (
-                <FooterLink key={link.id} {...link} />
+                <FooterLink key={link.id} {...link}/>
               ))}
             </ul>
           </div>
