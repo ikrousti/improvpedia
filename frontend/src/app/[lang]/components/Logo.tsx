@@ -13,10 +13,10 @@ export default function Logo({
     <Link
       href="/"
       aria-label="Back to homepage"
-      className="flex items-center p-2"
+      className="block "
     >
-      {src && <Image src={src} alt="logo" width={200} height={200} />}
-      <div className="ml-2">{children}</div>
+      {src && <Image src={src} alt="logo" width={200} height={50} />}
+      <div>{children}</div>
     </Link>
   );
 }

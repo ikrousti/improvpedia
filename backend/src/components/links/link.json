@@ -16,6 +16,10 @@
       "type": "boolean",
       "default": false
     },
+    "slug": {
+      "type": "string",
+      "required": false
+    },
     "text": {
       "type": "string",
       "required": true

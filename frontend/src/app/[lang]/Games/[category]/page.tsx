@@ -41,7 +41,7 @@ export default async function CategoryRoute({ params }: { params: { category: st
     const { name, description } = data[0]?.attributes.category.data.attributes;
 
     return (
-        <div>
+        <div >
             <PageHeader heading={name} text={description} />
             <BlogList data={data} />
         </div>

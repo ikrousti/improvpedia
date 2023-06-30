@@ -22,15 +22,14 @@ interface CategoryLink {
   };
 }
 
-function FooterLink({ url, text }: FooterLink) {
+function FooterLink({ url, text, newTab }: FooterLink) {
   const path = usePathname();
   return (
     <li className="flex">
       <Link
         href={url}
-        className={`hover:dark:text-violet-400 hover:underline  ${
-          path === url && "dark:text-violet-400 dark:border-violet-400 "
-        }}`}
+        className="text-orange-400 hover:text-white hover:underline"
+        target={newTab ? "_blank" : ""}
       >
         {text}
       </Link>
@@ -43,7 +42,7 @@ function CategoryLink({ attributes }: CategoryLink) {
     <li className="flex">
       <Link
         href={`/games/${attributes.slug}`}
-        className="hover:dark:text-violet-400"
+        className="text-orange-400 hover:text-white hover:underline"
       >
         {attributes.name}
       </Link>
@@ -81,7 +80,6 @@ export default function Footer({
   legalLinks: Array<FooterLink>;
   socialLinks: Array<FooterLink>;
 }) {
-
   return (
     <footer className="py-6 dark:bg-black  ">
       <div className="container px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
@@ -93,7 +91,9 @@ export default function Footer({
           </div>
 
           <div className="col-span-6 text-center md:text-left md:col-span-3">
-            <p className="pb-1 text-lg font-medium text-violet-400">Categories</p>
+            <p className="pb-1 text-orange-400 font-semibold text-xl">
+              Categories
+            </p>
             <ul>
               {categoryLinks.map((link: CategoryLink) => (
                 <CategoryLink key={link.id} {...link} />
@@ -102,17 +102,17 @@ export default function Footer({
           </div>
 
           <div className="col-span-6 text-center md:text-left md:col-span-3">
-            <p className="pb-1 text-lg font-medium text-violet-400">Menu</p>
-            <ul >
+            <p className="pb-1 text-orange-400 font-semibold text-xl">Menu</p>
+            <ul>
               {menuLinks.map((link: FooterLink) => (
-                <FooterLink key={link.id} {...link}/>
+                <FooterLink key={link.id} {...link} />
               ))}
             </ul>
           </div>
         </div>
         <div className="grid justify-center pt-6 lg:justify-between">
           <div className="flex">
-            <span className="mr-2">
+            <span className="mr-2 text-orange-400 ">
               ©{new Date().getFullYear()} All rights reserved
             </span>
             <ul className="flex">
